@@ -1,8 +1,7 @@
 # Celebrity & Events with LangChain
 
-![Celebrity & Events with LangChain Logo](logo.png)
 
-Welcome to Celebrity & Events with LangChain! This project aims to provide a platform where users can discover and explore information about celebrities and upcoming events using the power of LangChain technology. Whether you're a fan looking for the latest updates on your favorite celebrities or an event organizer searching for a way to promote your upcoming event, this application has got you covered.
+Welcome to Celebrity & Events with LangChain! This project aims to provide a platform where users can discover and explore information about celebrities and events using the power of LangChain. Whether you're a fan looking for the latest updates on your favorite celebrities or an event organizer searching for a way to promote your upcoming event, this application has got you covered.
 
 ## Features
 
@@ -23,7 +22,7 @@ To get started with Celebrity & Events with LangChain, follow these steps:
 1. **Clone the Repository**: Clone this repository to your local machine using the following command:
 
    ```shell
-   git clone https://github.com/your-username/celebrity-events-langchain.git
+   git clone https://github.com/tushar2704/Celebrity-Events-with-Langchain.git
    ```
 
 2. **Install Dependencies**: Navigate to the project directory and install the necessary dependencies by running:
@@ -37,18 +36,16 @@ To get started with Celebrity & Events with LangChain, follow these steps:
 4. **Run the Application**: Start the application locally by running the following command:
 
    ```shell
-   npm start
+streamlit run main.py
    ```
 
    This will launch the application on your localhost, and you can access it through your web browser.
 
 ## Technologies Used
 
-- **Front-end**: HTML, CSS, JavaScript, React.js
-- **Back-end**: Node.js, Express.js
-- **Database**: MongoDB
-- **Language Processing**: LangChain
-- **External APIs**: Social Media APIs, Event Ticketing APIs
+- **LangChain**: Prompt Chains
+- **OpenAI**: GPT 3.5 model
+- **Streamlit**: Web Application
 
 ## Contributing
 
@@ -67,6 +64,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-If you have any questions or suggestions regarding Celebrity & Events with LangChain, feel free to reach out to our team at [contact@celebrityevents.com](mailto:contact@celebrityevents.com). We value your feedback and would love to hear from you!
+If you have any questions or suggestions regarding Celebrity & Events with LangChain, feel free to reach out to our team at info@tushar-aggarwal.com. We value your feedback and would love to hear from you!
 
 Join us in revolutionizing the way we explore and interact with celebrities and events. Happy exploring!
