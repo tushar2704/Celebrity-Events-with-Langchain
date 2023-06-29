@@ -1,25 +1,35 @@
-# Celebrity Search with LangChain
+#Author Tushar Aggarwal(https://www.tushar-aggarwal.com/)
+# Celebrity & Events with LangChain
+# Impoting the required libraries
 
-#integrating OpenAI API
 import os
 from langchain.llms import OpenAI
+from jsonschema.exceptions import ValidationError
 #custom
 from langchain import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SequentialChain
 from langchain.memory import ConversationBufferMemory
 import streamlit as st
-st.title("Celebrity & Events")
-apikey=st.text_input("Your API KEY")
+# Page Configration
+# Application title and body
+st.set_page_config(page_title="🤖Celebrity & Events with LangChain🤖",
+                   page_icon="🤖",
+                   layout='wide')
+# Title of application
+st.title("🤖Celebrity & Events with LangChain")
+st.markdown("### By [Tushar Aggarwal](https://www.tushar-aggarwal.com/)")
 
-    
+# App body
+apikey=st.text_input("Your API KEY, its wont store it , so it is safe")
+
 if apikey:
-    input_text = st.text_input("Your query")
+    input_text = st.text_input("Enter Celebrity name & please wait some time after entering")
 
-# OpneAI
+# OpneAI config
 os.environ["OPENAI_API_KEY"] =apikey
 
-#Prompt Templates
+#Prompt Templates variables
 first_input_prompt=PromptTemplate(
     input_variables=['name'],
     template="Tell me about {name} celebrity")
@@ -27,18 +37,18 @@ first_input_prompt=PromptTemplate(
 
 second_input_prompt=PromptTemplate(
     input_variables=['person'],
-    template="When was{person} born")
+    template="When was {person} born")
 third_input_prompt=PromptTemplate(
     input_variables=['dob'],
-    template="Mention 5 major events happed around{dob} around the world")
+    template="Mention 5 major events happened around the world near date {dob} ")
 
-#Memory
+#Memory avriables
 person_memory = ConversationBufferMemory(input_key='name', memory_key='chat_history')
 dob_memory = ConversationBufferMemory(input_key='person', memory_key='chat_history')
 descr_memory = ConversationBufferMemory(input_key='dob', memory_key='description_history')
 
 
-#LLM chain
+#LLM chaining
 llm=OpenAI(temperature=0.8)
 chain=LLMChain(llm=llm, prompt=first_input_prompt, verbose=True,
                output_key='person', memory=person_memory)
@@ -58,7 +68,15 @@ if input_text:
     with st.expander('Major Events'): 
         st.info(descr_memory.buffer)
 
-
+# ---- HIDE STREAMLIT STYLE ----
+hide_st_style = """
+            <style>
+            MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
 
