@@ -3,43 +3,31 @@
 
 Welcome to Celebrity & Events with LangChain! This project aims to provide a platform where users can discover and explore information about celebrities and events using the power of LangChain. Whether you're a fan looking for the latest updates on your favorite celebrities or an event organizer searching for a way to promote your upcoming event, this application has got you covered.
 
-## Features
-
-- **Celebrity Profiles**: Browse through a vast database of celebrity profiles, including biographical information, career highlights, social media links, and more. Get to know your favorite celebrities better and stay up-to-date with their latest news.
-
-- **Event Listings**: Discover a wide range of events, including concerts, movie premieres, award shows, and more. Explore detailed event descriptions, schedules, ticket information, and even purchase tickets directly through the application.
-
-- **LangChain Technology**: Powered by LangChain, our innovative language processing technology, the application offers advanced search capabilities. Use natural language queries to find specific information about celebrities or events with ease.
-
-- **Personalized Recommendations**: Receive personalized recommendations based on your preferences and interests. The more you interact with the application, the better it understands your preferences and tailors its suggestions accordingly.
-
-- **Social Interaction**: Engage with other users through comments, likes, and shares. Share your thoughts about a celebrity or event, recommend them to others, and join in the excitement of the community.
-
 ## Getting Started
 
 To get started with Celebrity & Events with LangChain, follow these steps:
 
 1. **Clone the Repository**: Clone this repository to your local machine using the following command:
 
-   ```shell
+   ```
    git clone https://github.com/tushar2704/Celebrity-Events-with-Langchain.git
    ```
 
 2. **Install Dependencies**: Navigate to the project directory and install the necessary dependencies by running:
 
-   ```shell
-   npm install
+   ```
+ pip install requirements.txt
    ```
 
 3. **Configure the Environment**: Set up the required environment variables for the application. You'll need to obtain an API key for LangChain and any other third-party services used in the project.
 
 4. **Run the Application**: Start the application locally by running the following command:
 
-   ```shell
+   ```
 streamlit run main.py
    ```
 
-   This will launch the application on your localhost, and you can access it through your web browser.
+   This will launch the application on your local host, and you can access it through your web browser.
 
 ## Technologies Used
 
