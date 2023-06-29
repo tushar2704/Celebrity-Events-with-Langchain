@@ -3,6 +3,9 @@
 
 Welcome to Celebrity & Events with LangChain! This project aims to provide a platform where users can discover and explore information about celebrities and events using the power of LangChain. Whether you're a fan looking for the latest updates on your favorite celebrities or an event organizer searching for a way to promote your upcoming event, this application has got you covered.
 
+## Demo
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://celebrity-events-with-langchain.streamlit.app/)
 ## Getting Started
 
 To get started with Celebrity & Events with LangChain, follow these steps:
