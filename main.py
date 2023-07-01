@@ -21,11 +21,13 @@ st.title("🤖Celebrity & Events with LangChain")
 st.markdown("### By [Tushar Aggarwal](https://www.tushar-aggarwal.com/)")
 
 # App body
-apikey=st.text_input("Your API KEY, its wont store it , so it is safe")
+apikey=st.text_input("Your API KEY, its wont store it, so it is safe")
 
-if apikey:
-    input_text = st.text_input("Enter Celebrity name & please wait some time after entering")
-
+if not api_key:
+    st.write("Please enter your OpenAI API key first. Don't worry this will not be stored.")
+    st.stop()
+  
+input_text = st.text_input("Enter Celebrity name & please wait some time after entering")
 # OpneAI config
 os.environ["OPENAI_API_KEY"] =apikey
 
